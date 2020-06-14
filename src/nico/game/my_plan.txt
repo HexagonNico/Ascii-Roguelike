@@ -1,0 +1,45 @@
+----------------------------------------------------------------------------------------------------------------------------------------------
+Class Main
+   members:
+      JFrame window;
+      GameBoard board;
+
+   create frame
+   create gameBoard
+----------------------------------------------------------------------------------------------------------------------------------------------
+Class GameBoard extends JPanel implements ActionListener, KeyListener
+   members:
+      Timer timer (may not need)
+      stuff like score, gamestate...
+
+   constructor
+      addKeyListener(this);
+      this.setFocusable(true);
+
+      initialization
+      init timer
+
+   override paintComponent(Graphics)
+
+   override keyPressed(KeyEvent)
+
+   override actionPerformed(ActionEvent)
+      (only if used by timer)
+----------------------------------------------------------------------------------------------------------------------------------------------
+Read text file
+
+	String string
+		
+	try {
+		reader = new BufferedReader(new FileReader("fileName"));
+	} catch (FileNotFoundException e1) {}
+		
+	try {
+		String str = reader.readLine();
+		while(str!=null) {
+			str = reader.readLine();
+			string+=str;
+		}
+	} catch (IOException e) {}
+	
+	return string;
